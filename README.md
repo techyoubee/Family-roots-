@@ -50,6 +50,11 @@ The development tuning described in [Troubleshooting](#troubleshooting) is
 **not** server-ready (binlog off, `performance_schema` off, relaxed fsync); the
 deployment guide lists what to change back.
 
+For putting the site on a real VPS **and** wrapping it for Google Play / the
+Apple App Store, see `MOBILE.md` and the `mobile/` scaffold. The store packages
+are web-view wrappers around the hosted HTTPS site; an iOS `.ipa` needs macOS
+and Xcode.
+
 ## Demo accounts
 
 The seed creates these addresses with the password `FamilyRoots!Demo2026`:

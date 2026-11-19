@@ -1,0 +1,14 @@
+{
+  "appId": "com.familyroots.app",
+  "appName": "Family Roots",
+  "webDir": "www",
+  "server": {
+    "url": "https://REPLACE-WITH-YOUR-DOMAIN",
+    "cleartext": false,
+    "androidScheme": "https",
+    "iosScheme": "https",
+    "allowNavigation": [
+      "REPLACE-WITH-YOUR-DOMAIN"
+    ]
+  }
+}
