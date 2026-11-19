@@ -1,0 +1,3 @@
+# Application logs (may contain personal data - never commit).
+*
+!.gitignore

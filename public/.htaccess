@@ -1,0 +1,27 @@
+# Family Roots - Apache configuration for the public folder.
+#
+# The default AppServ/XAMPP setup has `AllowOverride None` on C:/AppServ/www and
+# mod_rewrite disabled, so this file may be ignored. The application detects
+# that and falls back to index.php?r=/path links, which keep every route
+# working. Enable these directives (see README) to get clean URLs.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Serve real files (CSS, JS, images) directly.
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Everything else is handled by the front controller.
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Never expose dotfiles or backups.
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>

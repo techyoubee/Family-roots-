@@ -1,0 +1,3 @@
+# Cache directory (compiled views, matching result cache).
+*
+!.gitignore

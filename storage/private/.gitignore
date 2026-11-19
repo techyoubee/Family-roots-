@@ -1,0 +1,5 @@
+# Private application storage.
+# Evidence documents, exports and temporary files live here and must stay
+# outside the public web directory. Everything except this file is ignored.
+*
+!.gitignore

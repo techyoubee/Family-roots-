@@ -1,0 +1,36 @@
+# Environment / secrets - never commit
+.env
+.env.*
+!.env.example
+!deploy/.env.production.example
+config/credentials.local.php
+
+# Private storage (evidence documents, logs, caches)
+storage/private/*
+!storage/private/.gitignore
+storage/logs/*
+!storage/logs/.gitignore
+storage/cache/*
+!storage/cache/.gitignore
+
+# Uploads that may leak into the public web root
+public/uploads/
+
+# Operating system / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.bak
+*.tmp
+*.swp
+.idea/
+.vscode/*.log
+
+# Local database dumps
+*.sql.gz
+dump-*.sql
+
+# PHP session files - may contain login state, never commit
+storage/sessions/*
+!storage/sessions/.gitignore
